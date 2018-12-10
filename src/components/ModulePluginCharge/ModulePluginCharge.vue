@@ -3,21 +3,21 @@
     <div class="charge-sidebar">
 
       <ul class="dao-list-group">
-          <router-link
-            v-for="i in menus"
-            :key="i.name"
-            :to="i.to">
-            <li
-              :class="['dao-list-item', {active: item === i.active}]"
-              @click="item = i.active">
-              {{i.name}}
-              <span class="icon">
-                <svg>
-                  <use xlink:href="#icon_caret-right"></use>
-                </svg>
-              </span>
-            </li>
-          </router-link>
+        <router-link
+          v-for="i in menus"
+          :key="i.name"
+          :to="i.to">
+          <li
+            :class="['dao-list-item', {active: item === i.active}]"
+            @click="item = i.active">
+            {{i.name}}
+            <span class="icon">
+              <svg>
+                <use xlink:href="#icon_caret-right"></use>
+              </svg>
+            </span>
+          </li>
+        </router-link>
       </ul>
 
       <!-- <ul class="dao-list-group">
@@ -38,7 +38,7 @@
 
     <div class="content-view">
       <charge-overview v-if="item === 1"></charge-overview>
-      <charge-app-detail v-else-if="item === 2"></charge-app-detail>
+      <charge-app-detail v-else-if="item === 2" :chargeApp="chargeApp"></charge-app-detail>
       <charge-storage-detail v-else-if="item ===3"></charge-storage-detail>
       <!-- <router-view></router-view> -->
     </div>
@@ -51,7 +51,6 @@ import ChargeAppDetail from '@/components/ChargeAppDetail/ChargeAppDetail.vue'
 import ChargeStorageDetail from '@/components/ChargeStorageDetail/ChargeStorageDetail.vue'
 export default {
   props: {
-
   },
   components: {
     ChargeOverview,
@@ -61,7 +60,7 @@ export default {
   data () {
     return {
       item: 1,
-      items: [1,2,3],
+      // items: [1,2,3],
       menus: [{
           active: 1,
           name: '计费概览',
@@ -77,7 +76,15 @@ export default {
           name: '存储消费详情',
           // adminRequired: true,
           to: '/charge/storage-detail',
-        }],
+        }
+      ],
+      chargeApps: {
+        title: '应用消费详情',
+        colony: [{},{},{}],
+        tenants: [{},{},{}],
+        allApps: [{},{},{}],
+        tableLists: [{},{},{}]
+      }
     }
   },
   computed: {
