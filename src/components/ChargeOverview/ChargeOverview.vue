@@ -1,10 +1,9 @@
 <template>
-  <div class="charge-app-detail">app</div>
+  <div class="charge-overview">overview</div>
 </template>
 
 <style lang="scss" scoped>
-.charge-app-detail {
+.charge-overview {
   background-color: darkgoldenrod;
 }
 </style>
-
