@@ -7,11 +7,15 @@ import './registerServiceWorker'
 import daoStyle from 'dao-style-vue'
 import 'dao-style-vue/styles/dao-style.css'
 
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
 import '@/assets/css/reset.scss'
 
 Vue.config.productionTip = false
 
 Vue.use(daoStyle)
+Vue.use(ElementUI)
 
 new Vue({
   router,
