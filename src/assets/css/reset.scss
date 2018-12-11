@@ -62,3 +62,18 @@ a:link {
   width: 10rem;
   max-width: 18rem; // default width in daoStyle
 }
+
+//  修复文字居中对daostyle tab的title 位置影响的问题
+.dao-tab {
+  .dao-tab__header {
+    text-align: left;
+  }
+}
+
+// 计费概览中 去掉tabs默认的下划线你
+.charge-overview {
+  .el-tabs__nav-wrap::after {
+    height: 0 !important;
+  }
+}
+

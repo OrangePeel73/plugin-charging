@@ -128,10 +128,117 @@
 
 export default {
   props: {
-    chargeApps: {type: Array, default: () => ({}) }
+    // chargeApps: {type: Object, default: () => ({}) }
   },
   data () {
     return {
+      chargeApps: {
+        title: '应用消费详情',
+        // 集群
+        colony: [
+          {
+          value: 'all',
+          text: '所有集群'
+          },
+          {
+            value: 'first',
+            text: '集群一'
+          },
+          {
+            value: 'two',
+            text: '集群二'
+          }
+        ],
+        // 租户
+        tenants: [
+          {
+            value: 'allTenants',
+            text: '所有租户'
+          },
+          {
+            value: 'default',
+            text: 'default'
+          },
+          {
+            value: 'testing',
+            text: 'testing'
+          }
+        ],
+        // 应用
+        apps: [
+          {
+                value: 'allApps',
+                text: '所有应用'
+              },
+              {
+                value: 'app1',
+                text: 'APP1'
+              },
+              {
+                value: 'app2',
+                text: 'APP2'
+              }
+        ],
+        dateList: {
+          date: '',
+          pickerOptions: {
+            shortcuts: [{
+              text: '最近一周',
+              onClick(picker) {
+                const end = new Date();
+                const start = new Date();
+                start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
+                picker.$emit('pick', [start, end]);
+              }
+            }, {
+              text: '最近一个月',
+              onClick(picker) {
+                const end = new Date();
+                const start = new Date();
+                start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
+                picker.$emit('pick', [start, end]);
+              }
+            }, {
+              text: '最近三个月',
+              onClick(picker) {
+                const end = new Date();
+                const start = new Date();
+                start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
+                picker.$emit('pick', [start, end]);
+              }
+            }]
+          },
+        },
+        tableList: [
+          {
+            appName: 'app1',
+            colony: '集群1',
+            tenant: 'default',
+            operation: '创建',
+            pay: '0.06',
+            timeStart: '2018-09-04 11:00:05',
+            timeEnd: '2018-09-08 11:00:05'
+          },
+          {
+            appName: 'app2',
+            colony: '集群1',
+            tenant: 'default',
+            operation: '更新配置',
+            pay: '0.06',
+            timeStart: '2018-09-04 11:00:05',
+            timeEnd: '2018-09-08 11:00:05'
+          },
+          {
+            appName: 'app3',
+            colony: '集群1',
+            tenant: 'testing',
+            operation: '创建',
+            pay: '0.06',
+            timeStart: '2018-09-04 11:00:05',
+            timeEnd: '2018-09-08 11:00:05'
+          }
+        ]
+      },
       // selected
       selectedList: {
         colony: 'all',

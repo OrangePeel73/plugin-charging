@@ -3,7 +3,7 @@
     <div class="charge-sidebar">
 
       <ul class="dao-list-group">
-        <router-link
+         <router-link
           v-for="i in menus"
           :key="i.name"
           :to="i.to">
@@ -37,10 +37,10 @@
 
 
     <div class="content-view">
-      <charge-overview v-if="item === 1"></charge-overview>
+      <!-- <charge-overview v-if="item === 1"></charge-overview>
       <charge-app-detail v-else-if="item === 2" :chargeApps="chargeApps"></charge-app-detail>
-      <charge-storage-detail v-else-if="item ===3" :chargeStorage="chargeStorage"></charge-storage-detail>
-      <!-- <router-view></router-view> -->
+      <charge-storage-detail v-else-if="item ===3" :chargeStorage="chargeStorage"></charge-storage-detail> -->
+      <router-view></router-view>
     </div>
   </div>
 </template>
