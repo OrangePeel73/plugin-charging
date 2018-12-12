@@ -3,7 +3,7 @@
     <div class="overview-wrap">
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane label="应用" name="first">
-          <app-list></app-list>
+          <app-list :appList="appList"></app-list>
         </el-tab-pane>
         <el-tab-pane label="存储" name="second">
           <storage-list :storageList="storageList"></storage-list>
@@ -24,37 +24,139 @@ export default {
   data () {
     return {
       activeName: 'first',
-      storageList: {
-        // 集群
-        colony: [
+      appList: {
+        // 下拉框
+        selectList:{
+          // 集群
+          colony: [
+            {
+            value: 'allColony',
+            text: '所有集群'
+            },
+            {
+              value: 'first',
+              text: '集群一'
+            },
+            {
+              value: 'two',
+              text: '集群二'
+            }
+          ], 
+          // 租户
+          tenants: [
+            {
+              value: 'allTenants',
+              text: '所有租户'
+            },
+            {
+              value: 'default',
+              text: 'default'
+            },
+            {
+              value: 'testing',
+              text: 'testing'
+            }
+          ],
+        },
+        // table
+        tableList: [
           {
-          value: 'allColony',
-          text: '所有集群'
+            appName: 'app1',
+            colony: '集群1',
+            tenant: 'default',
+            CPU: '0.05核',
+            memory: '50M',
+            time: '10天4小时',
+            pay: '200.10',
+            creatTime: '20天前',
           },
           {
-            value: 'first',
-            text: '集群一'
+            appName: 'app1',
+            colony: '集群2',
+            tenant: 'testing',
+            CPU: '0.50核',
+            memory: '50M',
+            time: '10天4小时',
+            pay: '200.10',
+            creatTime: '20天前',
           },
           {
-            value: 'two',
-            text: '集群二'
-          }
+            appName: 'app1',
+            colony: '集群1',
+            tenant: 'default',
+            CPU: '0.05核',
+            memory: '1G',
+            time: '0天4小时',
+            pay: '200.10',
+            creatTime: '1天前',
+          },
         ], 
-        // 租户
-        tenants: [
+        totalPay: 1000.00     
+      },
+      storageList: {
+        // 下拉框
+        selectList:{
+          // 集群
+          colony: [
+            {
+            value: 'allColony',
+            text: '所有集群'
+            },
+            {
+              value: 'first',
+              text: '集群一'
+            },
+            {
+              value: 'two',
+              text: '集群二'
+            }
+          ], 
+          // 租户
+          tenants: [
+            {
+              value: 'allTenants',
+              text: '所有租户'
+            },
+            {
+              value: 'default',
+              text: 'default'
+            },
+            {
+              value: 'testing',
+              text: 'testing'
+            }
+          ],
+        },
+        // table
+        tableList: [
           {
-            value: 'allTenants',
-            text: '所有租户'
+            pvc: 'PVC1',
+            colony: '集群1',
+            tenant: 'default',
+            volume: '10G',
+            time: '10天4小时',
+            pay: '200.10',
+            creatTime: '20天前',
           },
           {
-            value: 'default',
-            text: 'default'
+            pvc: 'PVC2',
+            colony: '集群2',
+            tenant: 'testing',
+            volume: '40G',
+            time: '10天3小时',
+            pay: '200.20',
+            creatTime: '10天前',
           },
           {
-            value: 'testing',
-            text: 'testing'
-          }
-        ],
+            pvc: 'PVC3',
+            colony: '集群1',
+            tenant: 'default',
+            volume: '20G',
+            time: '10天4小时',
+            pay: '100.10',
+            creatTime: '20天前',
+          },
+        ], 
         totalPay: 300.30     
       },
     }
@@ -70,16 +172,18 @@ export default {
 
 <style lang="scss" scoped>
 .charge-overview {
-  background-color: darkgoldenrod;
+  background-color: #fff;
+  border: 1px solid #e4e7ed;
+  border-radius: 4px 4px 0 0;
 
   .overview-wrap {
     
-    .el-tabs {
-      // tab —— header
-      .el-tabs__header {
-
-      }
-    }
+    // .el-tabs {
+    //   // tab —— header
+    //   .el-tabs__header {
+    //     background-color: #f5f7fa !important;
+    //   }
+    // }
   }
 }
 
