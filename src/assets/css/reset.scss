@@ -102,13 +102,14 @@ a:link {
       display: flex;
       align-items: flex-end;
       justify-content: flex-start;
-
-      // .el-tabs__nav {
-      //   .el-tabs__item {
-      //     padding: 0 !important;
-      //   }
-      // }
     }
   }
+}
+// table 溢出显示省略号
+.item-overview {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
 }
 

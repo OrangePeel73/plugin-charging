@@ -68,7 +68,7 @@ export default {
             memory: '50M',
             time: '10天4小时',
             pay: '200.10',
-            creatTime: '20天前',
+            createTime: '20天前',
           },
           {
             appName: 'app1',
@@ -78,7 +78,7 @@ export default {
             memory: '50M',
             time: '10天4小时',
             pay: '200.10',
-            creatTime: '20天前',
+            createTime: '20天前',
           },
           {
             appName: 'app1',
@@ -88,7 +88,7 @@ export default {
             memory: '1G',
             time: '0天4小时',
             pay: '200.10',
-            creatTime: '1天前',
+            createTime: '1天前',
           },
         ], 
         totalPay: 1000.00     
@@ -136,7 +136,7 @@ export default {
             volume: '10G',
             time: '10天4小时',
             pay: '200.10',
-            creatTime: '20天前',
+            createTime: '20天前',
           },
           {
             pvc: 'PVC2',
@@ -145,7 +145,7 @@ export default {
             volume: '40G',
             time: '10天3小时',
             pay: '200.20',
-            creatTime: '10天前',
+            createTime: '10天前',
           },
           {
             pvc: 'PVC3',
@@ -154,7 +154,7 @@ export default {
             volume: '20G',
             time: '10天4小时',
             pay: '100.10',
-            creatTime: '20天前',
+            createTime: '20天前',
           },
         ], 
         totalPay: 300.30     

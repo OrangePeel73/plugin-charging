@@ -90,27 +90,76 @@
             <div class="tableList">
                <table class="dao-table flexrow">
                 <thead>
-                  <tr>
-                    <th>存储名称</th>
-                    <th>集群</th>
-                    <th>租户</th>
-                    <th>容量</th>
-                    <th>支出</th>
-                    <th>计费开始时间</th>
-                    <th>计费结束时间</th>
+                  <tr class="theader">
+                    <th class="th-storageName">
+                      <span> 存储名称 </span>
+                    </th>
+                    <th class="th-colony">
+                      <span> 集群 </span>
+                    </th>
+                    <th class="th-tenant">
+                      <span> 租户 </span>
+                    </th>
+                    <th class="th-volume">
+                      <span> 容量 </span>
+                    </th>
+                    <th class="th-pay">
+                      <span> 支出 </span>
+                    </th>
+                    <th class="th-timeStart">
+                      <span> 计费开始时间 </span>
+                    </th>
+                    <th class="th-timeEnd">
+                      <span> 计费结束时间 </span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr
                     v-for="row in chargeStorage.tableList"
                     :key="row.storageName">
-                    <td>{{ row.storageName }}</td>
-                    <td>{{ row.colony }}</td>
-                    <td>{{ row.tenant }}</td>
-                    <td>{{ row.volume }}</td>
-                    <td>￥{{ row.pay }}</td>
-                    <td>{{ row.timeStart }}</td>
-                    <td>{{ row.timeEnd }}</td>
+                    <!-- 存储卷名称 -->
+                    <td class="item-storage">
+                      <div class="item-storageDetail" v-dao-tooltip:top.ellipsis="row.storageName">
+                        {{ row.storageName }}
+                      </div>
+                    </td>
+                    <!-- 集群 -->
+                    <td class="item-colony">
+                      <div class="item-storageDetail" v-dao-tooltip:top.ellipsis="row.colony">
+                        {{ row.colony }}
+                      </div>
+                    </td>
+                    <!-- 租户 -->
+                    <td class="item-tenant">
+                      <div class="item-storageDetail" v-dao-tooltip:top.ellipsis="row.tenant">
+                        {{ row.tenant }}
+                      </div>
+                    </td>
+                    <!-- 容量 -->
+                    <td class="item-volume">
+                      <div class="item-storageDetail" v-dao-tooltip:top.ellipsis="row.volume">
+                        {{ row.volume }}
+                      </div>
+                    </td>
+                    <!-- 支出 -->
+                    <td class="item-pay">
+                      <div class="item-storageDetail" v-dao-tooltip:top.ellipsis="'￥'+row.pay + '元'">
+                        ￥{{ row.pay }}
+                      </div>
+                    </td>
+                    <!-- 计费开始时间 -->
+                    <td class="item-timeStart">
+                      <div class="item-storageDetail" v-dao-tooltip:top.ellipsis="row.timeStart">
+                        {{ row.timeStart }}
+                      </div>
+                    </td>
+                    <!-- 计费结束时间 -->
+                    <td class="item-timeEnd">
+                      <div class="item-storageDetail" v-dao-tooltip:top.ellipsis="row.timeEnd">
+                        {{ row.timeEnd }}
+                      </div>
+                    </td>
                   </tr>
                 </tbody>
               </table>

@@ -39,24 +39,59 @@
       <table class="dao-table flexrow">
         <thead>
           <tr>
-            <th>存储卷</th>
-            <th>集群</th>
-            <th>租户</th>
-            <th>容量</th>
-            <th>使用时长</th>
-            <th>本期费用</th>
-            <th>创建时间</th>
+            <th class="th-pvc"><span>存储卷</span></th>
+            <th class="th-colony"><span>集群</span></th>
+            <th class="th-tenant"><span>租户</span></th>
+            <th class="th-volume"><span>容量</span></th>
+            <th class="th-time"><span>使用时长</span></th>
+            <th class="th-pay"><span>本期费用</span></th>
+            <th class="th-createTime"><span>创建时间</span></th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="row in storageList.tableList" :key="row.name">
-            <td>{{ row.pvc }}</td>
-            <td>{{ row.colony }} </td>
-            <td>{{ row.tenant }}</td>
-            <td>{{ row.volume }}</td>
-            <td>{{ row.time }}</td>
-            <td>{{ row.pay }}</td>
-            <td>{{ row.creatTime }}</td>
+            <!-- 存储名称 -->
+            <td class="item-pvc">
+              <div class="item-overview" v-dao-tooltip:top.ellipsis="row.pvc">
+                {{ row.pvc }}
+              </div>
+            </td>
+            <!-- 集群 -->
+            <td class="item-colony">
+              <div class="item-overview" v-dao-tooltip:top.ellipsis="row.colony">
+                {{ row.colony }}
+              </div>
+            </td>
+            <!-- 租户 -->
+            <td class="item-tenant">
+              <div class="item-overview" v-dao-tooltip:top.ellipsis="row.tenant">
+                {{ row.tenant }}
+              </div>
+            </td>
+            <!-- 容量 -->
+            <td class="item-volume">
+              <div class="item-overview" v-dao-tooltip:top.ellipsis="row.volume">
+                {{ row.volume }}
+              </div>
+            </td>
+            <!-- 使用时间 -->
+            <td class="item-time">
+              <div class="item-overview" v-dao-tooltip:top.ellipsis="row.time">
+                {{ row.time }}
+              </div>
+            </td>
+            <!-- 本期费用 -->
+            <td class="item-pay">
+              <div class="item-overview" v-dao-tooltip:top.ellipsis="'￥' + row.pay + '元'">
+                ￥{{ row.pay }}元
+              </div>
+            </td>
+            <!-- 创建时间 -->
+            <td class="item-createTime">
+              <div class="item-overview" v-dao-tooltip:top.ellipsis="row.createTime">
+                {{ row.createTime }}
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -99,7 +134,7 @@ export default {
 
   // table
   .tabel-storage-list {
-    margin: 1.5rem 0 0 0;
+    padding: 1.5rem;
   }
 }
 </style>

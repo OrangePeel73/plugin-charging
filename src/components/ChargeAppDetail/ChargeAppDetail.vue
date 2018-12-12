@@ -91,26 +91,61 @@
                <table class="dao-table flexrow">
                 <thead>
                   <tr>
-                    <th>应用名称</th>
-                    <th>集群</th>
-                    <th>租户</th>
-                    <th>操作</th>
-                    <th>支出</th>
-                    <th>计费开始时间</th>
-                    <th>计费结束时间</th>
+                    <th class="th-appName">应用名称</th>
+                    <th class="th-colony">集群</th>
+                    <th class="th-tenant">租户</th>
+                    <th class="th-operation">操作</th>
+                    <th class="th-pay">支出</th>
+                    <th class="th-timeStart">计费开始时间</th>
+                    <th class="th-timeEnd">计费结束时间</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr
                     v-for="row in chargeApps.tableList"
                     :key="row.appName">
-                    <td>{{ row.appName }}</td>
-                    <td>{{ row.colony }}</td>
-                    <td>{{ row.tenant }}</td>
-                    <td>{{ row.operation }}</td>
-                    <td>￥{{ row.pay }}</td>
-                    <td>{{ row.timeStart }}</td>
-                    <td>{{ row.timeEnd }}</td>
+                    <!-- 应用名称 -->
+                    <td class="item-appName">
+                      <div class="item-appDetail" v-dao-tooltip:top.ellipsis="row.appName">
+                        {{ row.appName }}
+                      </div>
+                    </td>
+                    <!-- 租户 -->
+                    <td class="item-colony">
+                      <div class="item-appDetail" v-dao-tooltip:top.ellipsis="row.colony">
+                        {{ row.colony }}
+                      </div>
+                    </td>
+                    <!-- 租户 -->
+                    <td class="item-tenant">
+                      <div class="item-appDetail" v-dao-tooltip:top.ellipsis="row.tenant">
+                        {{ row.tenant }}
+                      </div>
+                    </td>
+                    <!-- 操作 -->
+                    <td class="item-operation">
+                      <div class="item-appDetail" v-dao-tooltip:top.ellipsis="row.operation">
+                        {{ row.operation }}
+                      </div>
+                    </td>
+                    <!-- 支出 -->
+                    <td class="item-pay">
+                      <div class="item-appDetail" v-dao-tooltip:top.ellipsis="row.pay">
+                      ￥{{ row.pay }}
+                      </div>
+                    </td>
+                    <!-- 计费开始时间 -->
+                    <td class="item-timeStart">
+                      <div class="item-appDetail" v-dao-tooltip:top.ellipsis="row.timeStart">
+                        {{ row.timeStart }}
+                      </div>
+                    </td>
+                    <!-- 计费结束时间 -->
+                    <td class="item-timeEnd">
+                      <div class="item-appDetail" v-dao-tooltip:top.ellipsis="row.timeEnd">
+                        {{ row.timeEnd }}
+                      </div>
+                    </td>
                   </tr>
                 </tbody>
               </table>
