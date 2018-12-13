@@ -52,63 +52,75 @@ a:link {
   text-decoration: none;
 }
 
-.dao-list-item:last-child {
-  border-bottom: 0;
-}
-.dao-setting-layout {
-  text-align: left;
-}
+#plugin-charge-home {
 
-// .dao-select
-.dao-select {
-  width: 10rem;
-  max-width: 18rem; // default width in daoStyle
-}
+  // 修改 全局样式对daoStyle组件style的影响 以及修改daoStyle组件的样式满足需求
+  .charge-content-view {
+    .dao-list-item:last-child {
+      border-bottom: 0;
+    }
 
-//  修复文字居中对daostyle tab的title 位置影响的问题
-.dao-tab {
-  .dao-tab__header {
-    text-align: left;
-  }
-}
-
-// 计费概览中 去掉tabs默认的下划线你
-.charge-overview {
-  .el-tabs__nav-wrap::after {
-    height: 0 !important;
-  }
-}
-
-// 
-.el-tabs {
-  .el-tabs__item {
-    width: 4.5rem;
-    min-width: 4.5rem;
-  }
-  .is-active {
-    width: 4.5rem;
-  }
-}
-
-//  overview
-.overview-wrap {
-  .el-tabs {
-    // tab —— header
-    .el-tabs__header {
-      min-height: 4.25rem;
-      background-color: #f5f7fa !important;
-      border-bottom: 1px solid #e4e7ed;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
+    .dao-setting-layout {
+      text-align: left;
     }
   }
-}
-// table 溢出显示省略号
-.item-overview {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
+  // .dao-select 修改dao-select下拉框的宽度显示
+  .select-wrap {
+    .dao-select {
+      width: 10rem;
+      max-width: 18rem; // default width in daoStyle
+    }
+  }
+
+  // 计费概览中 去掉tabs默认的下划线你
+  .charge-overview {
+    .el-tabs__nav-wrap::after {
+      height: 0 !important;
+    }
+  }
+
+  // elementui : 标签页
+  .el-tabs {
+    .el-tabs__item {
+      width: 4.5rem;
+      min-width: 4.5rem;
+    }
+    .is-active {
+      width: 4.5rem;
+    }
+  }
+
+  //  overview
+  .overview-wrap {
+    .el-tabs {
+      // tab —— header
+      .el-tabs__header {
+        min-height: 4.25rem;
+        background-color: #f5f7fa !important;
+        border-bottom: 1px solid #e4e7ed;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  // table 溢出显示省略号
+  .item-overview {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+  }
+
+  // 把elementui 中分页组件pagination 修改为 与 dce分页组件style类似的只显示当前页
+  ul.el-pager {
+    li {
+      &:not(.active) {
+        display: none;
+      }
+    }
+  }
 
 }
-

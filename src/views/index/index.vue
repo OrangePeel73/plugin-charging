@@ -1,6 +1,8 @@
 <template>
   <div id="index">
     <module-plugin-charge></module-plugin-charge>
+    <!-- <dao-pagination></dao-pagination> -->
+    <ele-pagination></ele-pagination>
   </div>
 </template>
 

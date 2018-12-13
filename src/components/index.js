@@ -4,9 +4,10 @@ import AppList from './charge-overview/app-list/app-list.vue';
 import ChargeAppDetail from './charge-app-detail/charge-app-detail.vue';
 import ChargeStorageDetail from './charge-storage-detail/charge-storage-detail.vue';
 import ChargeOverview from './charge-overview/charge-overview.vue';
-import DaoPagination from './charge-overview/app-list/app-list.vue';
+import DaoPagination from './dao-pagination/dao-pagination.vue';
 import ModulePluginCharge from './module-plugin-charge/module-plugin-charge.vue';
 import StorageList from './charge-overview/storage-list/storage-list.vue';
+import ElePagination from './ele-pagination/ele-pagination.vue';
 
 const _components = {
   // 按照字典顺序排序
@@ -16,7 +17,8 @@ const _components = {
   ChargeStorageDetail,
   DaoPagination,
   ModulePluginCharge,
-  StorageList
+  StorageList,
+  ElePagination
 };
 
 const components = {};

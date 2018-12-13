@@ -36,7 +36,7 @@
     </div>
 
 
-    <div class="content-view">
+    <div class="charge-content-view">
       <charge-overview v-if="item === 1"></charge-overview>
       <charge-app-detail v-else-if="item === 2" :chargeApps="chargeApps"></charge-app-detail>
       <charge-storage-detail v-else-if="item ===3" :chargeStorage="chargeStorage"></charge-storage-detail>
@@ -306,7 +306,7 @@ export default {
     margin-top: 1rem;
 
   }
-  .content-view {
+  .charge-content-view {
     margin-top: 1rem;
     width: calc(100% - 12.5rem);
   }
