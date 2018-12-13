@@ -2,7 +2,7 @@
   <div id="plugin-charge-home">
     <div class="charge-sidebar">
 
-      <ul class="dao-list-group">
+      <!-- <ul class="dao-list-group">
          <router-link
           v-for="i in menus"
           :key="i.name"
@@ -18,9 +18,9 @@
             </span>
           </li>
         </router-link>
-      </ul>
+      </ul> -->
 
-      <!-- <ul class="dao-list-group">
+      <ul class="dao-list-group">
         <li v-for="i in menus"
           :class="['dao-list-item', {active: item === i.active}]"
           :key="i.name"
@@ -32,31 +32,31 @@
             </svg>
           </span>
         </li>
-      </ul> -->
+      </ul>
     </div>
 
 
     <div class="content-view">
-      <!-- <charge-overview v-if="item === 1"></charge-overview>
+      <charge-overview v-if="item === 1"></charge-overview>
       <charge-app-detail v-else-if="item === 2" :chargeApps="chargeApps"></charge-app-detail>
-      <charge-storage-detail v-else-if="item ===3" :chargeStorage="chargeStorage"></charge-storage-detail> -->
-      <router-view></router-view>
+      <charge-storage-detail v-else-if="item ===3" :chargeStorage="chargeStorage"></charge-storage-detail>
+      <!-- <router-view></router-view> -->
     </div>
   </div>
 </template>
 
 <script>
-import ChargeOverview from '@/components/ChargeOverview/ChargeOverview.vue'
-import ChargeAppDetail from '@/components/ChargeAppDetail/ChargeAppDetail.vue'
-import ChargeStorageDetail from '@/components/ChargeStorageDetail/ChargeStorageDetail.vue'
+// import ChargeOverview from '@/components/ChargeOverview/ChargeOverview.vue'
+// import ChargeAppDetail from '@/components/ChargeAppDetail/ChargeAppDetail.vue'
+// import ChargeStorageDetail from '@/components/ChargeStorageDetail/ChargeStorageDetail.vue'
 export default {
   props: {
   },
-  components: {
-    ChargeOverview,
-    ChargeAppDetail,
-    ChargeStorageDetail
-  },
+  // components: {
+  //   ChargeOverview,
+  //   ChargeAppDetail,
+  //   ChargeStorageDetail
+  // },
   data () {
     return {
       item: 1,

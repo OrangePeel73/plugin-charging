@@ -173,12 +173,14 @@
     </div>
   </div>
 </template>
-<script>
 
+<script>
+// import table from '@/mixins/table.js'
 export default {
   props: {
     // chargeStorage: {type: Object, default: () => ({}) }
   },
+  // extends: table('id', 10, 'name'),
   data () {
     return {
       chargeStorage: {
@@ -186,8 +188,8 @@ export default {
         // 集群
         colony: [
           {
-          value: 'all',
-          text: '所有集群'
+            value: 'all',
+            text: '所有集群'
           },
           {
             value: 'first',

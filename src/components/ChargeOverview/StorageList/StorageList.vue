@@ -51,6 +51,11 @@
         <tbody>
           <tr v-for="row in storageList.tableList" :key="row.name">
             <!-- 存储名称 -->
+            <!-- <td class="`item-${item }`" v-for="item in row" :key="item">
+              <div class="item-overview" v-dao-tooltip:top.ellipsis="item">
+                {{ item }}
+              </div>
+            </td> -->
             <td class="item-pvc">
               <div class="item-overview" v-dao-tooltip:top.ellipsis="row.pvc">
                 {{ row.pvc }}

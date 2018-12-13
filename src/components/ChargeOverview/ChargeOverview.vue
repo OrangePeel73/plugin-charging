@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import AppList from '@/components/ChargeOverview/AppList/AppList.vue'
-import StorageList from '@/components/ChargeOverview/StorageList/StorageList.vue'
+// import AppList from '@/components/ChargeOverview/AppList/AppList.vue'
+// import StorageList from '@/components/ChargeOverview/StorageList/StorageList.vue'
 export default {
-  components: {
-    AppList,
-    StorageList
-  },
+  // components: {
+  //   AppList,
+  //   StorageList
+  // },
   data () {
     return {
       activeName: 'first',
