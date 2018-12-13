@@ -5,7 +5,7 @@
         <el-tab-pane label="应用" name="first">
           <app-list :appList="appList"></app-list>
         </el-tab-pane>
-        <el-tab-pane label="存储" name="second">
+        <el-tab-pane label="存储卷" name="second">
           <storage-list :storageList="storageList"></storage-list>
         </el-tab-pane>
       </el-tabs>
@@ -177,11 +177,12 @@ export default {
       .el-tabs__header {
         .el-tabs__nav {
           margin-left: 1.5rem;
-        .el-tabs__item {
-          font-size: 18px;
-          font-weight: 400 !important;
+          .el-tabs__item {
+            color: #595f69;
+            font-size: 1rem;
+            font-weight: 400 !important;
+          }
         }
-      }
       }
     }
   }

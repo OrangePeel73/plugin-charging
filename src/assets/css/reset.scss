@@ -67,6 +67,7 @@ a:link {
 
   // .dao-select 修改dao-select下拉框的宽度显示
   .select-wrap {
+    padding: 0 0.5rem;
     .dao-select {
       width: 10rem;
       max-width: 18rem; // default width in daoStyle
@@ -100,14 +101,26 @@ a:link {
         background-color: #f5f7fa !important;
         border-bottom: 1px solid #e4e7ed;
         display: flex;
-        align-items: flex-end;
         justify-content: flex-start;
+        .el-tabs__nav-wrap {
+          .el-tabs__nav-scroll {
+            height: 100%;
+            .el-tabs__nav {
+              height: 100%;
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+            }
+          }
+        }
       }
     }
   }
 
   // table 溢出显示省略号
-  .item-overview {
+  .item-overview,
+  .item-appDetail,
+  .item-storageDetail {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
