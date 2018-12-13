@@ -136,10 +136,9 @@ export default {
     justify-content: flex-start;
     padding: 0 0.5rem;
     .select {
-      // #f5f7fa
-      margin: 0.5rem 0 0.5rem 1.5rem;
+      margin: 0.5rem 0 0.5rem 2rem;
       &:first-child{
-        margin-left: 2rem;
+        // margin-left: 2rem;
       }
     }
   }

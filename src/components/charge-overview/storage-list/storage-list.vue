@@ -131,15 +131,18 @@ export default {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    padding: 0 0.5rem;
     .select {
-      // #f5f7fa
-      margin: 0.5rem 0 0.5rem 1.5rem;
+      margin: 0.5rem 0 0.5rem 2rem;
+      &:first-child{
+        // margin-left: 1.5rem;
+      }
     }
   }
 
   // table
   .tabel-storage-list {
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
   }
 }
 </style>
