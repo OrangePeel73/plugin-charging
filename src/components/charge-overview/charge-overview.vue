@@ -14,13 +14,7 @@
 </template>
 
 <script>
-// import AppList from '@/components/ChargeOverview/AppList/AppList.vue'
-// import StorageList from '@/components/ChargeOverview/StorageList/StorageList.vue'
 export default {
-  // components: {
-  //   AppList,
-  //   StorageList
-  // },
   data () {
     return {
       activeName: 'first',
@@ -170,7 +164,7 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 .charge-overview {
   background-color: #fff;
   border: 1px solid #e4e7ed;
@@ -178,12 +172,18 @@ export default {
 
   .overview-wrap {
     
-    // .el-tabs {
-    //   // tab —— header
-    //   .el-tabs__header {
-    //     background-color: #f5f7fa !important;
-    //   }
-    // }
+    .el-tabs {
+      // tab —— header
+      .el-tabs__header {
+        .el-tabs__nav {
+          margin-left: 1.5rem;
+        .el-tabs__item {
+          font-size: 18px;
+          font-weight: 400 !important;
+        }
+      }
+      }
+    }
   }
 }
 

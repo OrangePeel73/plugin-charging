@@ -1,10 +1,12 @@
 import Vue from 'vue';
 
-import ChargeAppDetail from './ChargeAppDetail/ChargeAppDetail.vue';
-import ChargeStorageDetail from './ChargeStorageDetail/ChargeStorageDetail.vue';
-import ChargeOverview from './ChargeOverview/ChargeOverview.vue';
-import AppList from './ChargeOverview/AppList/AppList.vue';
-import StorageList from './ChargeOverview/StorageList/StorageList.vue';
+import AppList from './charge-overview/app-list/app-list.vue';
+import ChargeAppDetail from './charge-app-detail/charge-app-detail.vue';
+import ChargeStorageDetail from './charge-storage-detail/charge-storage-detail.vue';
+import ChargeOverview from './charge-overview/charge-overview.vue';
+import DaoPagination from './charge-overview/app-list/app-list.vue';
+import ModulePluginCharge from './module-plugin-charge/module-plugin-charge.vue';
+import StorageList from './charge-overview/storage-list/storage-list.vue';
 
 const _components = {
   // 按照字典顺序排序
@@ -12,6 +14,8 @@ const _components = {
   ChargeAppDetail,
   ChargeOverview,
   ChargeStorageDetail,
+  DaoPagination,
+  ModulePluginCharge,
   StorageList
 };
 

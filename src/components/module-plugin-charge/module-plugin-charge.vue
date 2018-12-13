@@ -46,17 +46,10 @@
 </template>
 
 <script>
-// import ChargeOverview from '@/components/ChargeOverview/ChargeOverview.vue'
-// import ChargeAppDetail from '@/components/ChargeAppDetail/ChargeAppDetail.vue'
-// import ChargeStorageDetail from '@/components/ChargeStorageDetail/ChargeStorageDetail.vue'
+
 export default {
   props: {
   },
-  // components: {
-  //   ChargeOverview,
-  //   ChargeAppDetail,
-  //   ChargeStorageDetail
-  // },
   data () {
     return {
       item: 1,
@@ -295,11 +288,6 @@ export default {
     }
   },
   computed: {
-    // menus () {
-    //   return [
-        
-    //   ]
-    // }
   }
 }
 </script>
@@ -311,7 +299,6 @@ export default {
   background-color: #f1f3f6;
   display: flex;
   justify-content: space-around;
-  // margin-top: 1rem;
 
   .charge-sidebar {
     width: 10rem;
